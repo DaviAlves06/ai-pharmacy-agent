@@ -1,4 +1,4 @@
-# 💊 AI Pharmacy Agent - Dr. Davi
+# 💊 AI Pharmacy Agent
 
 An intelligent pharmaceutical assistant developed with **Python** and **Google Generative AI (Gemini API)**. This agent is designed to assist users with medication queries, health recommendations, and general pharmaceutical guidance in a professional and safe manner.
 
@@ -60,6 +60,6 @@ Always seek the advice of a physician or other qualified health provider with an
 ## 👤 Author
 
 **Davi Alves**  
-- Software Engineering Student @ FIAP (Grade 10)  
+- Software Engineering Student @ FIAP 
 - LinkedIn  
 ```
