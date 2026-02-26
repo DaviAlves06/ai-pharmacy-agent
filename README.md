@@ -1,4 +1,3 @@
-```markdown
 # 💊 AI Pharmacy Agent - Dr. Davi
 
 An intelligent pharmaceutical assistant developed with **Python** and **Google Generative AI (Gemini API)**. This agent is designed to assist users with medication queries, health recommendations, and general pharmaceutical guidance in a professional and safe manner.
