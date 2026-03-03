@@ -1,65 +1,38 @@
-# 💊 AI Pharmacy Agent
+# 💊 Agente Farmacêutico - Explicador de Bulas (RAG)
 
-An intelligent pharmaceutical assistant developed with **Python** and **Google Generative AI (Gemini API)**. This agent is designed to assist users with medication queries, health recommendations, and general pharmaceutical guidance in a professional and safe manner.
-
----
-
-## 🚀 Key Features
-
-* **Context-Aware Interactions:** Built using chat history to maintain the flow of conversation.  
-* **System Instructions:** The agent is hard-coded to act as "Dr. Davi," a professional pharmacy attendant, ensuring a consistent and helpful persona.  
-* **Safety First:** Implements rigorous safety filters for categories like Hate Speech, Harassment, and Dangerous Content to ensure reliable interactions.  
-* **Real-time Guidance:** Capable of suggesting medication dosages, explaining side effects, and recommending medical consultations when necessary.  
+Este projeto apresenta um ambiente de experimentação em **IA Generativa** voltado para o setor de saúde. Utilizando um Jupyter Notebook, o sistema implementa um pipeline de **RAG (Retrieval-Augmented Generation)** para interpretar bulas farmacêuticas e responder dúvidas com alta precisão técnica.
 
 ---
 
-## 🛠 Tech Stack
+### 🎯 Proposta do Projeto
+Interpretar bulas de medicamentos pode ser um desafio devido à linguagem técnica. Este notebook demonstra como especializar o **Gemini 1.5 Flash** para ler documentos médicos e fornecer orientações seguras, baseadas estritamente no conteúdo fornecido, evitando alucinações.
 
-* **Language:** Python  
-* **Model:** Google Gemini 1.5 Flash  
-* **Library:** `google-generativeai`  
-
----
-
-## ⚙️ Setup & Installation
-
-1. **Clone the repository:**  
-   ```bash
-   git clone [https://github.com/DaviAlves06/ai-pharmacy-agent.git](https://github.com/DaviAlves06/ai-pharmacy-agent.git)
-   ```
-
-2. **Install dependencies:**  
-   ```bash
-   pip install -qU "langchain>=0.2.0,<0.4.0" langchain-community langchain-google-genai
-   ```
-
-3. **Configure your API Key:**  
-   Get your API key from Google AI Studio and set it up as an environment variable.
+### 🛠️ Tecnologias e Frameworks
+- **Linguagem:** Python (Google Colab)
+- **IA:** Google Gemini 1.5 Flash
+- **Orquestração:** LangChain
+- **Banco de Vetores:** ChromaDB (Persistência local no Colab)
+- **Embeddings:** HuggingFace (MiniLM-L6-v2)
 
 ---
 
-## 🛡️ Safety & Ethics
+### 🚀 Como Executar o Projeto
 
-This project prioritizes user safety by configuring the `safety_settings` of the Gemini model.  
-It actively blocks:  
-- Harassment  
-- Hate Speech  
-- Sexually Explicit Content  
-- Dangerous Content  
-
----
-
-## ⚠️ Disclaimer
-
-This AI Agent is for educational and informational purposes only.  
-It does not replace professional medical advice, diagnosis, or treatment.  
-Always seek the advice of a physician or other qualified health provider with any questions regarding a medical condition.  
+1. **Abrir no Colab:** Clique no botão "Open in Colab" presente no arquivo `.ipynb`.
+2. **Download dos Manuais:** Este projeto utiliza bulas oficiais como base de dados. Baixe os PDFs de exemplo abaixo:
+   - [📥 Download Bula Dipirona (Anvisa)](https://consultas.anvisa.gov.br/#/medicamentos/25351016140200211/?substancia=2090)
+   - [📥 Download Bula Paracetamol (Anvisa)](https://consultas.anvisa.gov.br/#/medicamentos/25351048037200319/?substancia=2501)
+3. **Upload:** Carregue os PDFs na pasta lateral do Google Colab.
+4. **API Key:** Insira sua chave do [Google AI Studio](https://aistudio.google.com/) quando solicitado.
 
 ---
 
-## 👤 Author
+### 🔬 Diferenciais deste Estudo
+- **Chunking Semântico:** Divisão de texto que respeita a estrutura de "Posologia", "Reações" e "Indicações".
+- **Metadados:** Classificação automática de trechos para buscas mais rápidas.
+- **Segurança:** Implementação de filtros para garantir que o agente recomende sempre a consulta a um médico real.
 
-**Davi Alves**  
-- Software Engineering Student @ FIAP 
-- LinkedIn  
-```
+---
+
+### 👨‍💻 Autor
+**Davi Alves** - Engenharia de Software @ FIAP
